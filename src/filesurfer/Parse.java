@@ -6,6 +6,9 @@ import java.util.*;
 
 public class Parse {
 	
+	private static int words;
+	private static int numbers;
+	
 	public static int parser(File somefile)
 	{
 		Scanner fileparse = null;
@@ -18,8 +21,6 @@ public class Parse {
 			e.printStackTrace();
 		}
 		
-		int numbers = 0;
-		int words = 0;
 		int total = 0;
 		
 		while(fileparse.hasNext())
@@ -65,5 +66,17 @@ public class Parse {
 		else 
 			return false;
 	}
+	
+	public int getNumbers()
+	{
+		return numbers;
+	}
+	
+	public int getWords()
+	{
+		return words;
+	}
+	
+	
 
 }
